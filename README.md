@@ -102,7 +102,7 @@ All requests to the API must include the following header for API Key authentica
         ```bash
         curl -H "X-API-KEY: your-api-key-here" -F "file=@path/to/data.csv" https://localhost:5000/api/fileupload/upload
    - Postman Example:
-      - Set POST request URL to `https://localhost:5001/api/fileupload/upload`
+      - Set POST request URL to `https://localhost:5000/api/fileupload/upload`
       - Add header: `X-API-KEY: your-api-key-here`
       - Upload the CSV file under the Body > form-data section
 
@@ -119,7 +119,7 @@ All requests to the API must include the following header for API Key authentica
         ```bash
         curl -H "X-API-KEY: your-api-key-here" -F "file=@path/to/data.json" https://localhost:5000/api/fileupload/upload
    - Postman Example:
-      - Set POST request URL to `https://localhost:5001/api/fileupload/upload`
+      - Set POST request URL to `https://localhost:5000/api/fileupload/upload`
       - Add header: `X-API-KEY: your-api-key-here`
       - Upload the JSON  file under the Body > form-data section
  
@@ -192,12 +192,6 @@ The API tracks all processed files and provides a report. You can access the rep
 - File Type (CSV or JSON)
 - Processing Result (e.g., average value or filtered data)
 - Timestamp of when the file was processed
-
----
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
