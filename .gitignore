@@ -1,0 +1,46 @@
+# Ignore build outputs
+bin/
+obj/
+
+# User-specific files (Visual Studio)
+.vscode/
+.vs/
+*.user
+*.suo
+*.csproj.user
+*.csproj.userosscache
+
+# Log files
+*.log
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# **Docker ignores**
+
+# Ignore docker-compose override files (useful for local development)
+docker-compose.override.yml
+
+# Ignore Dockerfile backups (created during Dockerfile edits)
+Dockerfile.*
+
+# Ignore local Docker configuration files
+.docker/
+
+# Ignore Docker-generated container or image cache files
+docker-compose.debug.yml
+docker-compose.test.yml
+docker-compose.dev.yml
+
+# Ignore any Docker environment variables
+.env
+
+# Publish output
+*.pubxml
+*.pubxml.user
+
+# Secrets
+secrets.json
+.env
