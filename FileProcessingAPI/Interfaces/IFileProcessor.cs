@@ -2,6 +2,6 @@
 
 namespace FileProcessingAPI.Interfaces {
     public interface IFileProcessor {
-        Task<IActionResult> ProcessFile(IFormFile file);
+        Task<string> ProcessFileAsync(IFormFile file);
     }
 }

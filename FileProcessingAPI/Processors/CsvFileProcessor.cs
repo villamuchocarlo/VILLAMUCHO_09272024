@@ -9,7 +9,7 @@ namespace FileProcessingAPI.Processors {
             _fileLogger = fileLogger;
         }
 
-        public async Task<IActionResult> ProcessFile(IFormFile file) {
+        public async Task<string> ProcessFileAsync(IFormFile file) {
             using (var reader = new StreamReader(file.OpenReadStream())) {
                 var total = 0.0;
                 var count = 0;
@@ -35,7 +35,7 @@ namespace FileProcessingAPI.Processors {
                 }
                 var average = total / count;
                 _fileLogger.LogFileProcessing(file.FileName, "CSV", average.ToString());
-                return new OkObjectResult(new { Result = "CSV file processed", Average = average });
+                return $"CSV file processed. Average: {average}";
             }
         }
     }

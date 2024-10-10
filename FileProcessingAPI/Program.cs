@@ -7,8 +7,7 @@ using FileProcessingAPI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the DI container
-
-// Register services for file processing, logging, etc.
+builder.Services.AddScoped<IFileProcessingService, FileProcessingService>();
 builder.Services.AddScoped<IFileProcessorFactory, FileProcessorFactory>();
 builder.Services.AddScoped<CsvFileProcessor>();
 builder.Services.AddScoped<JsonFileProcessor>();
@@ -60,6 +59,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseMiddleware<ApiKeyMiddleware>();  // Custom API key middleware
+app.UseMiddleware<ExceptionHandlingMiddleware>();  // New global exception handling middleware
 app.UseAuthorization();
 app.MapControllers();
 

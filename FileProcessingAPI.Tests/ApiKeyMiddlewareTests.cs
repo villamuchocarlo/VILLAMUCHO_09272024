@@ -41,7 +41,7 @@ public class ApiKeyMiddlewareTests
         configMock.Setup(x => x["ApiKey"]).Returns(apiKey);
 
         var httpContext = new DefaultHttpContext();
-        httpContext.Request.Headers["X-API-KEY"] = "invalid-key"; // Incorrect API Key
+        httpContext.Request.Headers["X-API-KEY"] = "invalid-key";
 
         var middleware = new ApiKeyMiddleware(_nextMock.Object, configMock.Object);
 
