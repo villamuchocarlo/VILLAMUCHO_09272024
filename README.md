@@ -29,7 +29,7 @@ To build the project, you need the .NET SDK installed.
 1. **Clone the repository**:
    ```bash
    git clone  https://github.com/villamuchocarlo/VILLAMUCHO_09272024.git
-   cd FileProcessingAPI
+   cd VILLAMUCHO_09272024\FileProcessingAPI
 
 1. **Build the project**:
    ```bash
@@ -45,6 +45,7 @@ There are two ways to run the application: locally or using Docker.
 
 1. **Restore dependencies (if needed)**:
    ```bash
+   cd ..
    dotnet restore
 
 2. **Run the API**:
@@ -117,7 +118,7 @@ All requests to the API must include the following header for API Key authentica
         ]
    - cURL Example:
         ```bash
-        curl -H "X-API-KEY: your-api-key-here" -F "file=@path/to/data.json" https://localhost:5000/api/fileupload/upload
+        curl -H "X-API-KEY: your-api-key-here" -F "file=@path/to/data.json" http://localhost:5000/api/fileupload/upload
    - Postman Example:
       - Set POST request URL to `https://localhost:5000/api/fileupload/upload`
       - Add header: `X-API-KEY: your-api-key-here`
@@ -126,7 +127,7 @@ All requests to the API must include the following header for API Key authentica
 3. **Get File Processing Report**:
    - cURL Example:
         ```bash
-        curl -X GET -H "X-API-KEY: your-api-key-here" https://localhost:5000/api/fileupload/report
+        curl -X GET -H "X-API-KEY: your-api-key-here" http://localhost:5000/api/fileupload/report
    - Postman Example:
       - Set GET request URL to `https://localhost:5000/api/fileupload/report`
       - Add header: `X-API-KEY: your-api-key-here`
